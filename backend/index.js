@@ -164,6 +164,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
+app.get("/",(req,res)=>{
+  res.send("server startted");
+})
+
 app.listen(port, () => {
   connect();
   console.log("Server running on 3000");
